@@ -1,2 +1,11 @@
 server:
   port: 8088
+spring:
+  application:
+    name: hello-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:3333/eureka/
+logging:
+  config: classpath:log4j.yml

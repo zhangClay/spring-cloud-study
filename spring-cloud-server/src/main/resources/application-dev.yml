@@ -1,14 +1,15 @@
+spring:
+  application:
+    name: eureka-server
 server:
   port: 1111
 eureka:
   instance:
-    hostname: discovery
+    hostname: peer1
   client:
-#    不需要注册本身
+    #    不需要注册本身
     register-with-eureka: false
-#    不需要检索服务
+    #    不需要检索服务
     fetch-registry: false
-
-#    service-url: http://${eureka.instance.hostname}:${server.port}/eureka
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:3333/eureka/
